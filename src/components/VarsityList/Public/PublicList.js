@@ -336,7 +336,7 @@ const PublicList = () => {
                 <div className="secondtable">
                     <h2>Specialized Universities</h2>
                 </div>
-                <table className="tableplist ">
+                <table className="tableplist">
                     <tbody><tr className="toptable">
                         <th>SL</th>
                         <th>University</th>
@@ -398,7 +398,7 @@ const PublicList = () => {
                             <td>Yes</td>
                         </tr>
                     </tbody></table>
-                <div className="secondtable">
+                {/* <div className="secondtable">
                     <h2>Agricultural Universities</h2>
                 </div>
                 <table className="tableplist ">
@@ -472,7 +472,7 @@ const PublicList = () => {
                             <td>Agricultural Science</td>
                             <td>Yes</td>
                         </tr>
-                    </tbody></table>
+                    </tbody></table> */}
                 <div className="secondtable">
                     <h2>Engineering Universities</h2>
                 </div>
@@ -538,7 +538,7 @@ const PublicList = () => {
                             <td>Yes</td>
                         </tr>
                     </tbody></table>
-                <div className="secondtable">
+                {/* <div className="secondtable">
                     <h2>Off Campus Universities</h2>
                 </div>
                 <table className="tableplist lasttable ">
@@ -582,7 +582,9 @@ const PublicList = () => {
                             <td>Islamic</td>
                             <td>Yes</td>
                         </tr>
-                    </tbody></table>
+                    </tbody></table> */}
+                    <br/>
+                    <br/>
             </div>
 
 

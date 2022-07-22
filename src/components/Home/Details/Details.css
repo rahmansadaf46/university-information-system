@@ -6,6 +6,11 @@
 }
 .details{
     z-index: 1;
+    background-color: #FBF9B9;
+    padding: 30px 0px;
+    margin-bottom: -65px;
+    /* background-image: url('../../../fakeData/images/images/mandala.jpg'); */
+    /* opacity: 0.5; */
 }
 .details .card-title{
     text-align: center;
@@ -57,7 +62,7 @@
     font-weight: bold;
     font-size: 100px;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    color:brown;
+    color:#21B573;
 }
 
 .divon{
@@ -66,7 +71,7 @@
 }
 
 .details .listh{
-    color:rgb(22, 107, 107);
+    color:#39393B;
     /* font-family: 'Times New Roman', Times, serif; */
     font-weight: bold;
 }
@@ -79,8 +84,10 @@
 .details .logop{
     font-size: 14px;
     font-weight: bold;
+    color:#0875F7;
     /* font-family: 'Times New Roman', Times, serif; */
     padding-top: 20px 30px;
+    margin-left: 10px;
 }
 
 .details .btn-primary{
@@ -141,7 +148,7 @@
   }
 
   .listh:hover{
-      font-size: 45px;
+      /* font-size: 40px; */
       transition: 0.8s;
   }
 

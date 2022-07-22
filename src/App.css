@@ -143,5 +143,7 @@ color: #e1e1e1;
 }
 
 body {
-  font-family: 'Righteous', cursive!important;
+  /* font-family: 'Righteous', cursive!important; */
+  font-family: 'Macondo', cursive!important;
 }
+

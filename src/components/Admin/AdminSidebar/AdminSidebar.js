@@ -29,63 +29,28 @@ const AdminSidebar = () => {
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add Book</span>
                     </Link>
                 </li>
+        
                 {/* <br />
-                <li>
-                    <Link to="/admin/addQuestion" className="">
-                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add Question</span>
-                    </Link>
-                </li> */}
-                <br />
                 <li>
                     <Link to="/admin/addUniversity" className="">
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add University</span>
                     </Link>
-                </li>
-                {/* <br />
-                <li>
-                    <Link to="/admin/addTeacher" className="">
-                        <span style={{color: 'blue', fontWeight: 'bold',fontSize:'14px'}}> <FontAwesomeIcon icon={faPlus} /> Add Teacher</span>
-                    </Link>
                 </li> */}
-                {/* <br />
-                <li>
-                    <Link to="/admin/questionList" className="">
-                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> Question List</span>
-                    </Link>
-                </li> */}
-                {/* <br />
-                <li>
-                    <Link to="/admin/teacherList" className="">
-                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> Teacher List</span>
-                    </Link>
-                </li> */}
+
                 <br />
                 <li>
                     <Link to="/admin/itemList" className="">
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> Book List</span>
                     </Link>
                 </li>
-                <br />
+                {/* <br />
                 <li>
                     <Link to="/admin/universityList" className="">
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> University List</span>
                     </Link>
-                </li>
-         
-                {/* <br />
-
-              
-                <li>
-                    <Link to="/admin/pendingAppointment" className="">
-                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faCookieBite} /> Pending Appointment</span>
-                    </Link>
-                </li>
-                <br />
-                <li>
-                    <Link to="/admin/approvedAppointment" className="">
-                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faCheckCircle} /> Approved Appointment</span>
-                    </Link>
                 </li> */}
+         
+        
             </ul>
 
         </div>

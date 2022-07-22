@@ -32,7 +32,7 @@
 }
 
 .toptable th{
-    background-color: #0F1A50;
+    background-color: #FFC107;
     color:white;
     height:50px;
     font-size: 20px;
@@ -42,7 +42,7 @@
 }
 
 .toptable th:hover{
-    color:orange;
+    color:black;
 }
 
 .list td{

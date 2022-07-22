@@ -45,7 +45,8 @@ const Menu = () => {
 
 
     return (
-        <div className="menuBody container mt-5"  >
+        <div style={{background:'#FBF9B9', paddingBottom:'40px', marginBottom:'-50px'}}>
+            <div className="menuBody container mt-5"  >
                        <div className="vsl mb-5">
             <h1>Book Collection</h1>
           </div>
@@ -71,6 +72,7 @@ const Menu = () => {
                         <button style={{ backgroundColor: 'gray', color: 'white', outline: 'none' }} className="btn  px-5">Checkout Your Book</button>
                     </div>
             }
+        </div>
         </div>
     );
 };

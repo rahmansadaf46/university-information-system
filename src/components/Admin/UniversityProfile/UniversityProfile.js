@@ -73,14 +73,14 @@ const UniversityProfile = () => {
                                  <p style={{fontSize: '18px' }}><b>Ranking:</b> &nbsp; <span className="text-primary font-weight-bold">{university?.data?.ranking}</span></p>
                                  {university?.data?.worldRanking && <p style={{fontSize: '18px' }}><b>World Ranking:</b> &nbsp; <span className="text-primary font-weight-bold">{university?.data?.worldRanking}</span></p>}
                                  
-                                 <p style={{fontSize: '18px',color: 'orange',textDecoration: 'underline'}}><b>Preferred Subject</b></p>
-                                 {university?.data?.subject.map(subject => <div style={{position: 'relative', left: '-38px'}}>
+                                 {/* <p style={{fontSize: '18px',color: 'orange',textDecoration: 'underline'}}><b>Preferred Subject</b></p> */}
+                                 {/* {university?.data?.subject.map(subject => <div style={{position: 'relative', left: '-38px'}}>
                                     <ul className="text-danger font-weight-bold">
                                          <li># {subject}</li>
                                      </ul>
                                  </div>
                                  
-                                 )}
+                                 )} */}
                             </div>
                     </div>
                     <div className="d-flex justify-content-center mt-5">

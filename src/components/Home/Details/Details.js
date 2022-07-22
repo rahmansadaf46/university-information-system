@@ -9,16 +9,16 @@ import aiublogo from '../../../fakeData/images/images/aiublogo.jpg'
 import sarkarilogo from '../../../fakeData/images/images/sarkarilogo.jpg'
 import titulogo from '../../../fakeData/images/images/titulogo.jpg'
 import edenlogo from '../../../fakeData/images/images/edenlogo.jpg'
-import DU from '../../../fakeData/images/images/DU.jpg'
-import sust from '../../../fakeData/images/images/sust.jpg'
-import JU from '../../../fakeData/images/images/JU.jpg'
-import diu from '../../../fakeData/images/images/diu.jpg'
-import nsu from '../../../fakeData/images/images/nsu.jpg'
+// import DU from '../../../fakeData/images/images/DU.jpg'
+// import sust from '../../../fakeData/images/images/sust.jpg'
+// import JU from '../../../fakeData/images/images/JU.jpg'
+// import diu from '../../../fakeData/images/images/diu.jpg'
+// import nsu from '../../../fakeData/images/images/nsu.jpg'
 
-import uttora from '../../../fakeData/images/images/uttora.jpg'
-import dhakacollege from '../../../fakeData/images/images/dhakacollege.jpg'
-import lalmatia from '../../../fakeData/images/images/lalmatia.jpg'
-import eden from '../../../fakeData/images/images/eden.jpg'
+// import uttora from '../../../fakeData/images/images/uttora.jpg'
+// import dhakacollege from '../../../fakeData/images/images/dhakacollege.jpg'
+// import lalmatia from '../../../fakeData/images/images/lalmatia.jpg'
+// import eden from '../../../fakeData/images/images/eden.jpg'
 import QuestionHome from '../QuestionHome/QuestionHome';
 
 
@@ -28,7 +28,8 @@ import QuestionHome from '../QuestionHome/QuestionHome';
 
 const Details = () => {
     return (
-        <div className="mx-5 details">
+        <div className=" details">
+          <div style={{marginTop:'-30px'}}>
         {/*Varsity List*/}
         <div className="vsl">
           <h1>University List</h1>
@@ -292,8 +293,9 @@ const Details = () => {
             </div>
           </div>
         </div> */}
-        <QuestionHome/>
+        {/* <QuestionHome/> */}
       </div>
+        </div>
       
     );
 };

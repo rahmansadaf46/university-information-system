@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import React, { useEffect, useState } from 'react';
-import Select from 'react-select';
+// import Select from 'react-select';
 import Modal from 'react-modal';
 const customStyles = {
     content: {
@@ -13,23 +13,23 @@ const customStyles = {
         width: '40%',
     }
 };
-const customStylesInput = {
-    control: (provided, state) => ({
-        ...provided,
-        // border: "2px solid blue",
-        // borderRadius: "20px",
-        boxShadow: state.isFocused ? null : null,
-    }),
+// const customStylesInput = {
+//     control: (provided, state) => ({
+//         ...provided,
+//         // border: "2px solid blue",
+//         // borderRadius: "20px",
+//         boxShadow: state.isFocused ? null : null,
+//     }),
 
-};
+// };
 const UpdateUniversity = ({ modalIsOpen, closeModal, university }) => {
     const { register, handleSubmit, errors } = useForm();
     const [universities, setUniversities] = useState([]);
     const [worldRanking, setWorldRanking] = useState(false)
-    const [subject, setSubject] = useState([]);
-    const handleSubject = (e) => {
-        setSubject(e)
-    }
+    // const [subject, setSubject] = useState([]);
+    // const handleSubject = (e) => {
+    //     setSubject(e)
+    // }
     const handleChange = (e) => {
         // console.log(e.target.name, e.target.value)
         if (e.target.value === "Public") {
@@ -64,7 +64,7 @@ const UpdateUniversity = ({ modalIsOpen, closeModal, university }) => {
                 let subject = { value: data, label: data }
                 tempArray.push(subject)
             })
-            setSubject(tempArray)
+            // setSubject(tempArray)
             // data.subject = tempArray;
         }
     }, [university?.data?.subject])
@@ -80,45 +80,27 @@ const UpdateUniversity = ({ modalIsOpen, closeModal, university }) => {
     const onSubmit = data => {
         // console.log(data)
 
-        if (subject.length === 0) {
-            alert('insert subject')
+        const rankingValidation = universities.filter(university => university.data.category === data.category && university.data.ranking === data.ranking)
+        // console.log(data, rankingValidation)
+        if (university?.data?.ranking !== data.ranking && rankingValidation.length > 0) {
+            alert('Ranking Number already exist')
         }
         else {
-
-            let tempArray = [];
-            subject.forEach(data => {
-
-                tempArray.push(data.value)
+            fetch(`http://localhost:4200/updateUniversity/${university._id}`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
             })
-            data.subject = tempArray;
-
-            const rankingValidation = universities.filter(university => university.data.category === data.category && university.data.ranking === data.ranking)
-            // console.log(data, rankingValidation)
-            if (university?.data?.ranking !== data.ranking && rankingValidation.length > 0) {
-                alert('Ranking Number already exist')
-            }
-            else {
-                fetch(`http://localhost:4200/updateUniversity/${university._id}`, {
-                    method: 'PATCH',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                .then(response => response.json())
+                .then(data => {
+                    window.alert('University added successfully');
+                    window.location.reload();
+                    window.scrollTo(0, 0);
                 })
-                    .then(response => response.json())
-                    .then(data => {
-                        window.alert('University added successfully');
-                        window.location.reload();
-                        window.scrollTo(0, 0);
-                    })
 
-                    .catch(error => {
-                        console.error(error)
-                    })
-            }
-
-
-
-
-
+                .catch(error => {
+                    console.error(error)
+                })
         }
         // const finalData = {
         //     university: data.university,
@@ -150,18 +132,18 @@ const UpdateUniversity = ({ modalIsOpen, closeModal, university }) => {
 
 
     }
-    const options = [
-        { value: 'CSE', label: 'CSE' },
-        { value: 'EEE', label: 'EEE' },
-        { value: 'Software Engineering', label: 'Software Engineering' },
-        { value: 'Pharmacy', label: 'Pharmacy' },
-        { value: 'BBA', label: 'BBA' },
-        { value: 'English', label: 'English' },
-        { value: 'Marketing', label: 'Marketing' },
-        { value: 'Psychology', label: 'Psychology' },
-        { value: 'Accounting', label: 'Accounting' },
-        { value: 'Political Science', label: 'Political Science' },
-    ]
+    // const options = [
+    //     { value: 'CSE', label: 'CSE' },
+    //     { value: 'EEE', label: 'EEE' },
+    //     { value: 'Software Engineering', label: 'Software Engineering' },
+    //     { value: 'Pharmacy', label: 'Pharmacy' },
+    //     { value: 'BBA', label: 'BBA' },
+    //     { value: 'English', label: 'English' },
+    //     { value: 'Marketing', label: 'Marketing' },
+    //     { value: 'Psychology', label: 'Psychology' },
+    //     { value: 'Accounting', label: 'Accounting' },
+    //     { value: 'Political Science', label: 'Political Science' },
+    // ]
     // console.log(university)
     return (
         <Modal
@@ -220,7 +202,7 @@ const UpdateUniversity = ({ modalIsOpen, closeModal, university }) => {
                     </div>
 
                 </div>}
-                <div style={{position:'relative',right:'131px'}} className="form-group row mb-1 d-flex justify-content-center">
+                {/* <div style={{position:'relative',right:'131px'}} className="form-group row mb-1 d-flex justify-content-center">
                     <div className="form-group col-6 text-center d-flex">
                         <label className="pt-1 col-12" for=""><b>Enter Preferred Subjects:</b></label>
                         <Select
@@ -238,7 +220,7 @@ const UpdateUniversity = ({ modalIsOpen, closeModal, university }) => {
                         />
 
                     </div>
-                </div>
+                </div> */}
                 {/* <div className="d-flex justify-content-center">
                     <div className="form-group d-flex ">
                         <label className="pt-1 col-6" for=""><b>University Name:</b></label>

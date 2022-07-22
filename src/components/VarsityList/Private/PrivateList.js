@@ -1115,6 +1115,8 @@ const PrivateList = () => {
                             <td>No</td>
                         </tr>
                     </tbody></table>
+                    <br/>
+                    <br/>
             </div>
 
 

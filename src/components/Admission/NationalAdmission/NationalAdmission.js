@@ -24,21 +24,21 @@ const NationalAdmission = () => {
         </tr>
         <tr>
           <td rowSpan={4}> Dhaka College<br /><br />Eden Mohila College<br /><br />Govt. Shaheed Suhrawardy College, Dhaka<br /><br />Kabi Nazrul Government College<br /><br />Begum Badrunnessa Government Girls College<br /><br />Government Bangla College<br /><br />Government Titumir College</td>
-          <td rowSpan={4}>2020-2021 </td>
-          <td rowSpan={4}>10.07.2021</td>
-          <td rowSpan={4}>10.09.2021</td>
+          <td rowSpan={4}>2020-2022 </td>
+          <td rowSpan={4}>10.07.2022</td>
+          <td rowSpan={4}>10.09.2022</td>
           <td>Science </td>
-          <td>23.10.2021</td>
+          <td>23.10.2022</td>
           <td>11am-12pm</td>
         </tr>
         <tr>
           <td>Commerce</td>
-          <td>23.10.2021</td>
+          <td>23.10.2022</td>
           <td>11am-12pm</td>
         </tr>
         <tr>
           <td>Arts and social sciences</td>
-          <td>23.10.2021</td>
+          <td>23.10.2022</td>
           <td>11am-12pm</td>
         </tr>
       </tbody></table>

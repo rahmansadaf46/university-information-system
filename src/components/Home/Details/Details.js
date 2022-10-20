@@ -19,7 +19,7 @@ import edenlogo from '../../../fakeData/images/images/edenlogo.jpg'
 // import dhakacollege from '../../../fakeData/images/images/dhakacollege.jpg'
 // import lalmatia from '../../../fakeData/images/images/lalmatia.jpg'
 // import eden from '../../../fakeData/images/images/eden.jpg'
-import QuestionHome from '../QuestionHome/QuestionHome';
+// import QuestionHome from '../QuestionHome/QuestionHome';
 
 
 

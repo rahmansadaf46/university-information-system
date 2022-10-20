@@ -333,71 +333,7 @@ const PublicList = () => {
                             <td>Yes</td>
                         </tr>
                     </tbody></table>
-                <div className="secondtable">
-                    <h2>Specialized Universities</h2>
-                </div>
-                <table className="tableplist">
-                    <tbody><tr className="toptable">
-                        <th>SL</th>
-                        <th>University</th>
-                        <th>Acronym</th>
-                        <th>established</th>
-                        <th>Location</th>
-                        <th>Division</th>
-                        <th>Specialization</th>
-                        <th>Ph.D Granting</th>
-                    </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Bangabandhu Sheikh Mujibur Rahman Aviation and Aerospace University</td>
-                            <td>BSMRAAU</td>
-                            <td>2019</td>
-                            <td>Lalmonirhat</td>
-                            <td>Rangpur</td>
-                            <td>Aeronautical Science</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>02</td>
-                            <td>Bangabandhu Sheikh Mujibur Rahman Digital University</td>
-                            <td>BSMRDU</td>
-                            <td>2018</td>
-                            <td>Kaliakoir</td>
-                            <td>Dhaka</td>
-                            <td>ICT in education</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>03</td>
-                            <td>Bangladesh University of Textiles University</td>
-                            <td>BUTEX</td>
-                            <td>2010</td>
-                            <td>Dhaka</td>
-                            <td>Dhaka</td>
-                            <td>Textile Engineering</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>04</td>
-                            <td>Bangabandhu Sheikh Mujibur Rahman Maritime University</td>
-                            <td>BSMRMU</td>
-                            <td>2013</td>
-                            <td>Chittagong</td>
-                            <td>Chittagong</td>
-                            <td>Maritime transport</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>05</td>
-                            <td>Chittagong Veterinary and Animal Sciences University</td>
-                            <td>CVASU</td>
-                            <td>2006</td>
-                            <td>Chittagong</td>
-                            <td>Chittagong</td>
-                            <td>Veterinary Science</td>
-                            <td>Yes</td>
-                        </tr>
-                    </tbody></table>
+             
                 {/* <div className="secondtable">
                     <h2>Agricultural Universities</h2>
                 </div>

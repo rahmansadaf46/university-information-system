@@ -63,7 +63,7 @@ const ItemProfile = () => {
                 <div className="col-md-2">
                     <AdminSidebar />
                 </div>
-                <div style={{ backgroundColor: '#FEF78D', height: '100vh' }} className="col-md-10 pt-4">
+                <div style={{ backgroundColor: '#FEF78D', minHeight: '100vh' }} className="col-md-10 pt-4">
                     <div className="text-center  text-primary">
                         <h2><u>Book</u></h2>
                     </div>
@@ -78,7 +78,7 @@ const ItemProfile = () => {
                                  <p style={{fontSize: '18px' }}><b>Description:</b> &nbsp; <span className="text-primary font-weight-bold">{item?.description}</span></p>
                             </div>
                     </div>
-                    <div className="d-flex justify-content-center mt-5">
+                    <div className="d-flex justify-content-center my-5">
                         <button  onClick={openModal}  className="btn btn-warning mx-2 font-weight-bold" >Update Book</button>
                         <UpdateItem modalIsOpen={modalIsOpen} item={item} closeModal={closeModal}></UpdateItem>
                         <button onClick={() => { if (window.confirm('Are You Sure?')) { handleDelete(item._id) }; }} className="btn btn-danger mx-2 font-weight-bold" >Delete Book</button>

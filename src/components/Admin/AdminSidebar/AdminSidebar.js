@@ -30,12 +30,12 @@ const AdminSidebar = () => {
                     </Link>
                 </li>
         
-                {/* <br />
+                <br />
                 <li>
                     <Link to="/admin/addUniversity" className="">
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add University</span>
                     </Link>
-                </li> */}
+                </li>
 
                 <br />
                 <li>
@@ -43,12 +43,12 @@ const AdminSidebar = () => {
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> Book List</span>
                     </Link>
                 </li>
-                {/* <br />
+                <br />
                 <li>
                     <Link to="/admin/universityList" className="">
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> University List</span>
                     </Link>
-                </li> */}
+                </li>
          
         
             </ul>

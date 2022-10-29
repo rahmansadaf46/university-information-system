@@ -64,10 +64,10 @@ const UniversityProfile = () => {
                 </div>
                 <div style={{ backgroundColor: '#FEF78D', height: '140vh' }} className="col-md-10 pt-4">
                     <div className="text-center  text-primary">
-                        <h2><u>University</u></h2>
+                        <h2><u>University Ranking Details</u></h2>
                     </div>
                     <div className="d-flex justify-content-center">
-                            <div style={{border: '1px solid lightGray',boxShadow: '5px 5px 20px gray',padding: '30px'}}>
+                            <div style={{border: '1px solid lightGray', background:'white', boxShadow: '5px 5px 20px gray',padding: '30px'}}>
                                  <p style={{fontSize: '18px' }}><b>University Name:</b> &nbsp; <span className="text-primary font-weight-bold">{university?.data?.universityName}</span></p>
                                  <p style={{fontSize: '18px' }}><b>Category:</b> &nbsp; <span className="text-primary font-weight-bold">{university?.data?.category}</span></p>
                                  <p style={{fontSize: '18px' }}><b>Ranking:</b> &nbsp; <span className="text-primary font-weight-bold">{university?.data?.ranking}</span></p>

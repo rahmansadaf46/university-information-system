@@ -9,20 +9,20 @@ import AdminSidebar from '../AdminSidebar/AdminSidebar';
 
 
 
-const AddUniversity = () => {
+const AddUniversityDetails = () => {
     const { register, handleSubmit, errors } = useForm();
 
     const email = sessionStorage.getItem('email')
-    const [universities, setUniversities] = useState([]);
-    useEffect(() => {
-        fetch(`http://localhost:4200/universities`)
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data);
-                setUniversities(data)
+    // const [universities, setUniversities] = useState([]);
+    // useEffect(() => {
+    //     fetch(`http://localhost:4200/universities`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             // console.log(data);
+    //             setUniversities(data)
 
-            })
-    }, [])
+    //         })
+    // }, [])
     useEffect(() => {
         if (email !== "admin@gmail.com") {
             sessionStorage.clear();
@@ -30,7 +30,7 @@ const AddUniversity = () => {
             window.location.assign("/");
         }
     }, [email])
-    const [worldRanking, setWorldRanking] = useState(false)
+    const [publicUniversity, setPublicUniversity] = useState(false)
     // const [subject, setSubject] = useState([]);
     // const handleSubject = (e) => {
     //     setSubject(e)
@@ -38,34 +38,25 @@ const AddUniversity = () => {
     const handleChange = (e) => {
         // console.log(e.target.name, e.target.value)
         if (e.target.value === "Public") {
-            setWorldRanking(true)
-        }
-        else if (e.target.value === "Private") {
-            setWorldRanking(true)
+            setPublicUniversity(true)
         }
         else {
-            setWorldRanking(false)
+            setPublicUniversity(false)
         }
 
     }
 
     const onSubmit = data => {
-        // console.log(data?.worldRanking)
+        // console.log(data?.publicUniversity)
 
-        const rankingValidation = universities.filter(university => university.data.category === data.category && university.data.ranking === data.ranking)
-        // console.log(data, rankingValidation)
-        if (rankingValidation.length > 0) {
-            alert('Ranking Number already exist')
-        }
-        else {
-            fetch('http://localhost:4200/addUniversity', {
+        fetch('http://localhost:4200/addUniversityDetails', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             })
                 .then(response => response.json())
                 .then(data => {
-                    window.alert('University added successfully');
+                    window.alert('University Details added successfully');
                     window.location.reload();
                     window.scrollTo(0, 0);
                 })
@@ -73,7 +64,6 @@ const AddUniversity = () => {
                 .catch(error => {
                     console.error(error)
                 })
-        }
 
 
 
@@ -109,10 +99,12 @@ const AddUniversity = () => {
                 </div>
                 <div style={{ backgroundColor: '#FEF78D', minHeight: '130vh' }} className="col-md-10 pt-4">
                     <div className="text-center  text-primary">
-                        <h2><u>Add University Ranking</u></h2>
+                        <h2><u>Add University Details</u></h2>
                     </div>
                     <div className="col-md-12">
-                        <div><form className="p-3 container col-6" onSubmit={handleSubmit(onSubmit)}>
+                        <div><form className="p-3 container col-6" 
+                        onSubmit={handleSubmit(onSubmit)}
+                        >
                             <div className="form-group text-primary text-center container">
                                 <label for=""><b>Enter University Name</b></label>
                                 <input style={{ borderRadius: '15px', border: '2px solid #0000FF' }} required type="text" ref={register({ required: true })} name="universityName" placeholder="Enter University Name" className="form-control" />
@@ -134,14 +126,54 @@ const AddUniversity = () => {
                             </div>
                             <div className="form-group row mb-1 d-flex justify-content-center">
                                 <div className="form-group col-6 text-primary text-center">
-                                    <label for=""><b>Enter Ranking</b></label>
-                                    <input required style={{ borderRadius: '15px', border: '2px solid #0000FF' }} type="text" ref={register({ required: true })} name="ranking" placeholder="Enter Ranking" className="form-control" />
+                                    <label for=""><b>Enter Acronym</b></label>
+                                    <input required style={{ borderRadius: '15px', border: '2px solid #0000FF' }} type="text" ref={register({ required: true })} name="acronym" placeholder="Enter Acronym" className="form-control" />
                                 </div>
                             </div>
-                            {worldRanking && <div className="form-group row mb-1 d-flex justify-content-center">
+                            <div className="form-group row mb-1 d-flex justify-content-center">
                                 <div className="form-group col-6 text-primary text-center">
-                                    <label for=""><b>Enter World Ranking</b></label>
-                                    <input required={worldRanking} style={{ borderRadius: '15px', border: '2px solid #0000FF' }} type="text" ref={register({ required: worldRanking })} name="worldRanking" placeholder="Enter World Ranking" className="form-control" />
+                                    <label for=""><b>Enter Established Year</b></label>
+                                    <input required style={{ borderRadius: '15px', border: '2px solid #0000FF' }} type="number" ref={register({ required: true })} name="established" placeholder="Enter Established Year" className="form-control" />
+                                </div>
+                            </div>
+                            <div className="form-group row mb-1 d-flex justify-content-center">
+                                <div className="form-group col-6 text-primary text-center">
+                                    <label for=""><b>Enter Location</b></label>
+                                    <input required style={{ borderRadius: '15px', border: '2px solid #0000FF' }} type="text" ref={register({ required: true })} name="location" placeholder="Enter Location" className="form-control" />
+                                </div>
+                            </div>
+                            <div className="form-group row mb-1 d-flex justify-content-center">
+                                <div className="form-group col-6 text-primary text-center">
+                                    <label for=""><b>Enter Division</b></label>
+                                    <input required style={{ borderRadius: '15px', border: '2px solid #0000FF' }} type="text" ref={register({ required: true })} name="division" placeholder="Enter Division" className="form-control" />
+                                </div>
+                            </div>
+                            <div className="form-group row mb-1 d-flex justify-content-center">
+                                <div className="form-group col-6 text-primary text-center">
+                                    <label for=""><b>Enter PHD Granting</b></label>
+                                    <div><select required style={{ padding: '6px 50px', border: '2px solid blue', borderRadius: '15px' }} ref={register({ required: true })} name="phd"
+                                        // onChange={(e) => handleChange(e)}
+                                    >
+                                        <option value="">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+
+                                    </select></div>
+                                </div>
+                            </div>
+                            {publicUniversity && <div className="form-group row mb-1 d-flex justify-content-center">
+                                <div className="form-group col-6 text-primary text-center">
+                                    <label for=""><b>Enter Public Category</b></label>
+                                   
+                                    <div><select required={publicUniversity} style={{ padding: '6px 20px', border: '2px solid blue', borderRadius: '15px' }} ref={register({ required: publicUniversity })} name="publicUniversityCategory"
+                                        // onChange={(e) => handleChange(e)}
+                                    >
+                                        <option value="">Select</option>
+                                        <option value="General Universities">General Universities</option>
+                                        <option value="Science & Technology Universities">Science & Technology Universities</option>
+                                        <option value="Engineering Universities">Engineering Universities</option>
+
+                                    </select></div>
                                 </div>
                             </div>}
                             {/* <div className="form-group row mb-1 d-flex justify-content-center">
@@ -179,4 +211,4 @@ const AddUniversity = () => {
     );
 };
 
-export default AddUniversity;
+export default AddUniversityDetails;

@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../VarsityList.css';
 // import pic from '../../../fakeData/images/images/ranking/national.jpg';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
 const NationalList = () => {
+    const [universities, setUniversities] = useState([]);
+    useEffect(() => {
+        fetch(`http://localhost:4200/universitiesDetails`)
+            .then(res => res.json())
+            .then(response => {
+                let categoryWise = response.filter(data => data.data.category === "National");
+                setUniversities(categoryWise)
+                // setAllUniversities(ranking)
+            })
+    }, [])
     return (
         <div>
             <Header></Header>
@@ -15,53 +25,26 @@ const NationalList = () => {
                 </div>
                 <table className="tableplist">
                     <tbody><tr className="toptable">
-                        <th>SL</th>
+                    <th>SL</th>
                         <th>University</th>
+                        <th>Acronym</th>
                         <th>established</th>
                         <th>Location</th>
                         <th>Division</th>
                         <th>Ph.D Granting</th>
                     </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Institute of Science and Technology</td>
-                            <td>1993</td>
-                            <td>Dhaka</td>
-                            <td>Dhaka</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>02</td>
-                            <td>Institute of Science Trade & Technology (ISTT)</td>
-                            <td>2015</td>
-                            <td>Dhaka</td>
-                            <td>Dhaka</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>03</td>
-                            <td>Bangladesh Institute of Science and Technology</td>
-                            <td>2010</td>
-                            <td>Dhaka</td>
-                            <td>Dhaka</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>04</td>
-                            <td>IDEAL INSTITUTE OF SCIENCE & TECHNOLOGY</td>
-                            <td>2013</td>
-                            <td>Dhaka</td>
-                            <td>Dhaka</td>
-                            <td>No</td>
-                        </tr>
-                        <tr>
-                            <td>05</td>
-                            <td>National Institute of Science and Technology</td>
-                            <td>2019</td>
-                            <td>Dhaka</td>
-                            <td>Dhaka</td>
-                            <td>No</td>
-                        </tr>
+                    {universities.map((data, index) =>
+                            <tr>
+                                <th scope="row">{index + 1}</th>
+                                <td>{data.data.universityName}</td>
+                                <td>{data.data.acronym}	</td>
+                                <td>{data.data.established}</td>
+                                <td>{data.data.location}</td>
+                                <td>{data.data.division}</td>
+                                <td>{data.data.phd}</td>
+                            </tr>
+
+                        )}
                     </tbody></table>
             </div>
 

@@ -33,7 +33,14 @@ const AdminSidebar = () => {
                 <br />
                 <li>
                     <Link to="/admin/addUniversity" className="">
-                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add University</span>
+                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add University Ranking</span>
+                    </Link>
+                </li>
+
+                <br />
+                <li>
+                    <Link to="/admin/addUniversityDetails" className="">
+                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add University Details</span>
                     </Link>
                 </li>
 
@@ -46,7 +53,7 @@ const AdminSidebar = () => {
                 <br />
                 <li>
                     <Link to="/admin/universityList" className="">
-                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> University List</span>
+                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> University Ranking List</span>
                     </Link>
                 </li>
          

@@ -131,7 +131,7 @@ const UniversityList = () => {
                 </div>
                 <div style={{ backgroundColor: '#FEF78D', height: '100vh' }} className="col-md-10 pt-4">
                     <div className="text-center  text-primary">
-                        <h2><u>University List</u></h2>
+                        <h2><u>University Ranking List</u></h2>
                     </div>
                     <div className="d-flex justify-content-center container">
                         <div className="d-flex justify-content-start container col-6">

@@ -82,7 +82,7 @@ const PublicRanking = () => {
       <div>
         <div className="rankingheader">
           <h1>Top 10 Public Universities 2022 Ranking in Bangladesh</h1>
-          <p>Updated on June 13th, 2021</p>
+          <p className='text-white'>Updated on June 13th, 2022</p>
         </div>
         <div className="rankingimage">
           <img src={pic} alt="" />

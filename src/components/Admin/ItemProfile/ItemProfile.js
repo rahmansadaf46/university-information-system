@@ -68,7 +68,7 @@ const ItemProfile = () => {
                         <h2><u>Book</u></h2>
                     </div>
                     <div className="d-flex justify-content-center">
-                            <div style={{border: '1px solid lightGray',boxShadow: '5px 5px 20px gray',padding: '30px'}}>
+                            <div style={{border: '1px solid lightGray',background:'white', boxShadow: '5px 5px 20px gray',padding: '30px'}}>
                                 <div className="d-flex justify-content-center">
                                     <img className="w-50 mb-4" src={`http://localhost:4200/${item.image}`} alt="" />
                                 </div>

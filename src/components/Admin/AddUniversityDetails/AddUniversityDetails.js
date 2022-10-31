@@ -1,5 +1,5 @@
 import React, {
-    useEffect, useState,
+    useEffect
     // useState 
 } from 'react';
 import { useForm } from 'react-hook-form';
@@ -30,21 +30,11 @@ const AddUniversityDetails = () => {
             window.location.assign("/");
         }
     }, [email])
-    const [publicUniversity, setPublicUniversity] = useState(false)
     // const [subject, setSubject] = useState([]);
     // const handleSubject = (e) => {
     //     setSubject(e)
     // }
-    const handleChange = (e) => {
-        // console.log(e.target.name, e.target.value)
-        if (e.target.value === "Public") {
-            setPublicUniversity(true)
-        }
-        else {
-            setPublicUniversity(false)
-        }
-
-    }
+  
 
     const onSubmit = data => {
         // console.log(data?.publicUniversity)
@@ -114,7 +104,7 @@ const AddUniversityDetails = () => {
                                 <div className="form-group col-6 text-primary text-center">
                                     <label for=""><b>Enter Category</b></label>
                                     <div><select required style={{ padding: '6px 50px', border: '2px solid blue', borderRadius: '15px' }} ref={register({ required: true })} name="category"
-                                        onChange={(e) => handleChange(e)}
+                                        
                                     >
                                         <option value="">Select</option>
                                         <option value="Public">Public</option>
@@ -161,21 +151,7 @@ const AddUniversityDetails = () => {
                                     </select></div>
                                 </div>
                             </div>
-                            {publicUniversity && <div className="form-group row mb-1 d-flex justify-content-center">
-                                <div className="form-group col-6 text-primary text-center">
-                                    <label for=""><b>Enter Public Category</b></label>
-                                   
-                                    <div><select required={publicUniversity} style={{ padding: '6px 20px', border: '2px solid blue', borderRadius: '15px' }} ref={register({ required: publicUniversity })} name="publicUniversityCategory"
-                                        // onChange={(e) => handleChange(e)}
-                                    >
-                                        <option value="">Select</option>
-                                        <option value="General Universities">General Universities</option>
-                                        <option value="Science & Technology Universities">Science & Technology Universities</option>
-                                        <option value="Engineering Universities">Engineering Universities</option>
-
-                                    </select></div>
-                                </div>
-                            </div>}
+                           
                             {/* <div className="form-group row mb-1 d-flex justify-content-center">
                                 <div className="form-group col-6 text-primary text-center">
                                     <label for=""><b>Enter Preferred Subjects</b></label>

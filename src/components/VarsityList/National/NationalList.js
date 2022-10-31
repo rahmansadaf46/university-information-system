@@ -23,7 +23,8 @@ const NationalList = () => {
                     <p>National University of Bangladesh is the most popular university in our country. The university plays a vital role in our higher level Honours, Degree and Masters course. Every year a large number of students have admitted in this university. On the other hand a large number of student have graduated under this university.There we provide colleges list which is affiliated with National University.
                     </p>
                 </div>
-                <table className="tableplist">
+                {
+                    universities.length>0?<table className="tableplist my-4">
                     <tbody><tr className="toptable">
                     <th>SL</th>
                         <th>University</th>
@@ -45,7 +46,8 @@ const NationalList = () => {
                             </tr>
 
                         )}
-                    </tbody></table>
+                    </tbody></table>:<><h2 style={{padding:'110px 0px'}} className='text-center text-warning'>Loading...</h2></>
+                }
             </div>
 
             <Footer></Footer>

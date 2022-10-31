@@ -56,7 +56,12 @@ const AdminSidebar = () => {
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> University Ranking List</span>
                     </Link>
                 </li>
-         
+                <br />
+                <li>
+                    <Link to="/admin/universityDetailsList" className="">
+                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> University Details List</span>
+                    </Link>
+                </li>
         
             </ul>
 

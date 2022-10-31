@@ -53,6 +53,7 @@ import UniversityList from "./components/Admin/UniversityList/UniversityList";
 import ItemProfile from "./components/Admin/ItemProfile/ItemProfile";
 import UniversityProfile from "./components/Admin/UniversityProfile/UniversityProfile";
 import AddUniversityDetails from "./components/Admin/AddUniversityDetails/AddUniversityDetails";
+import UniversityDetailsList from "./components/Admin/UniversityDetailsList/UniversityDetailsList";
 
 export const UserContext = createContext();
 
@@ -138,6 +139,9 @@ function App() {
           </Route>
           <Route path="/admin/universityList">
             <UniversityList/>
+          </Route>
+          <Route path="/admin/universityDetailsList">
+            <UniversityDetailsList/>
           </Route>
           <Route path="/admin/addTeacher">
             <AddTeacher/>

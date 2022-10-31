@@ -23,7 +23,8 @@ const PrivateList = () => {
                     <p>Establishment of private universities in Bangladesh was initiated after the institution of the Private University Act 1992.There are 108 private universities in Bangladesh.The establishment of a private university is relatively a new phenomenon in this country. In the early 1990s, the private sector came forward to establish universities. Since then the country experienced spectacular growth in private universities.Most of the private universities are in Dhaka Division.
                     </p>
                 </div>
-                <table className="tableplist">
+                {
+                    universities.length>0 ? <table className="tableplist">
                     <tbody><tr className="toptable">
                         <th>SL</th>
                         <th>University</th>
@@ -46,7 +47,8 @@ const PrivateList = () => {
 
                         )}
 
-                    </tbody></table>
+                    </tbody></table> :<><h2 style={{padding:'100px 0px'}} className='text-center text-warning'>Loading...</h2></>
+                }
                 <br />
                 <br />
             </div>

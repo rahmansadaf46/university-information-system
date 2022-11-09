@@ -81,7 +81,7 @@ const NationalRanking = () => {
             <Header></Header>
             <div>
                 <div className="rankingheader">
-                    <h1>Top 10 National Universities 2022 Ranking in Bangladesh</h1>
+                    <h2>Top Colleges under National Universities For ECE Department 2022 Ranking in Bangladesh</h2>
                     <p className='text-white'>Updated on June 13th, 2022</p>
                 </div>
                 <div className="rankingimage">

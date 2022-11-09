@@ -43,7 +43,12 @@ const AdminSidebar = () => {
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add University Details</span>
                     </Link>
                 </li>
-
+                <br />
+                <li>
+                    <Link to="/admin/addAdmissionDetails" className="">
+                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faPlus} /> Add Admission Details</span>
+                    </Link>
+                </li>
                 <br />
                 <li>
                     <Link to="/admin/itemList" className="">
@@ -62,7 +67,12 @@ const AdminSidebar = () => {
                         <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> University Details List</span>
                     </Link>
                 </li>
-        
+                <br />
+                <li>
+                    <Link to="/admin/admissionDetails" className="">
+                        <span style={{ color: 'blue', fontWeight: 'bold',fontSize:'14px' }}><FontAwesomeIcon icon={faThList} /> Admission Details List</span>
+                    </Link>
+                </li>
             </ul>
 
         </div>

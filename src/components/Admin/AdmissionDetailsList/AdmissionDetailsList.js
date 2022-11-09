@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import AdminHeader from '../AdminHeader/AdminHeader';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
 
-const UniversityDetailsList = () => {
+const AdmissionDetailsList = () => {
     const [allUniversities, setAllUniversities] = useState([]);
     const [universities, setUniversities] = useState([]);
     const [query, setQuery] = useState("");
@@ -51,7 +51,7 @@ const UniversityDetailsList = () => {
                     {/* <button className="btn btn-sm btn-success font-weight-bold">Details</button> */}
                     <Link
                         className="btn btn-sm btn-success font-weight-bold"
-                        to={`/admin/universityDetail/${data.id}`}                    
+                        to={`/admin/admissionDetail/${data.id}`}                    
                     >
                         Details
 
@@ -64,7 +64,7 @@ const UniversityDetailsList = () => {
         },
     ];
     useEffect(() => {
-        fetch('http://localhost:4200/universitiesDetails')
+        fetch('http://localhost:4200/admissionDetails')
             .then(res => res.json())
             .then(data => { 
                 const universityList = data.map(university => {
@@ -133,7 +133,7 @@ const UniversityDetailsList = () => {
                 </div>
                 <div style={{ backgroundColor: '#FEF78D', height: '100vh' }} className="col-md-10 pt-4">
                     <div className="text-center  text-primary">
-                        <h2><u>University Details List</u></h2>
+                        <h2><u>Admission Details List</u></h2>
                     </div>
                     <div className="d-flex justify-content-center container">
                         <div className="d-flex justify-content-start container col-6">
@@ -196,4 +196,4 @@ const UniversityDetailsList = () => {
     );
 };
 
-export default UniversityDetailsList;
+export default AdmissionDetailsList;

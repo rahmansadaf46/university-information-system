@@ -54,6 +54,10 @@ import ItemProfile from "./components/Admin/ItemProfile/ItemProfile";
 import UniversityProfile from "./components/Admin/UniversityProfile/UniversityProfile";
 import AddUniversityDetails from "./components/Admin/AddUniversityDetails/AddUniversityDetails";
 import UniversityDetailsList from "./components/Admin/UniversityDetailsList/UniversityDetailsList";
+import AddAdmissionDetails from "./components/Admin/AddAdmissionDetails/AddAdmissionDetails";
+import AdmissionDetailsList from "./components/Admin/AdmissionDetailsList/AdmissionDetailsList";
+import UniversityDetailProfile from "./components/Admin/UniversityDetailProfile/UniversityDetailProfile";
+import AdmissionDetail from "./components/Admin/AdmissionDetail/AdmissionDetail";
 
 export const UserContext = createContext();
 
@@ -74,10 +78,10 @@ function App() {
             <SignUp></SignUp>
           </Route>
           <PrivateRoute path="/skillTest">
-           <SkillTest/>
+            <SkillTest />
           </PrivateRoute>
           <PrivateRoute path="/exam">
-           <Exam/>
+            <Exam />
           </PrivateRoute>
           <PrivateRoute path="/checkout">
             <Checkout></Checkout>
@@ -106,59 +110,71 @@ function App() {
           <Route path="/admin/approvedAppointment">
             <ApprovedAppointment />
           </Route>
-          
+
           <Route path="/admin/addItem">
-            <AddItem/>
+            <AddItem />
           </Route>
           <Route path="/admin/itemList">
-            <ItemList/>
+            <ItemList />
           </Route>
           <Route path="/admin/item/:id">
             <ItemProfile />
           </Route>
           <Route path="/admin/addUniversity">
-            <AddUniversity/>
+            <AddUniversity />
           </Route>
           <Route path="/admin/addUniversityDetails">
-            <AddUniversityDetails/>
+            <AddUniversityDetails />
           </Route>
           <Route path="/admin/university/:id">
             <UniversityProfile />
           </Route>
           <Route path="/admin/addQuestion">
-            <AddQuestion/>
+            <AddQuestion />
           </Route>
           <Route path="/admin/questionList">
-            <QuestionList/>
+            <QuestionList />
           </Route>
           <Route path="/admin/question/:id">
             <QuestionProfile />
           </Route>
           <Route path="/admin/teacherList">
-            <TeacherList/>
+            <TeacherList />
           </Route>
           <Route path="/admin/universityList">
-            <UniversityList/>
+            <UniversityList />
           </Route>
           <Route path="/admin/universityDetailsList">
-            <UniversityDetailsList/>
+            <UniversityDetailsList />
+          </Route>
+          <Route path="/admin/universityDetail/:id">
+            <UniversityDetailProfile />
+          </Route>
+          <Route path="/admin/addAdmissionDetails">
+            <AddAdmissionDetails />
+          </Route>
+          <Route path="/admin/admissionDetails">
+            <AdmissionDetailsList/>
+          </Route>
+          <Route path="/admin/admissionDetail/:id">
+            <AdmissionDetail />
           </Route>
           <Route path="/admin/addTeacher">
-            <AddTeacher/>
+            <AddTeacher />
           </Route>
           <Route path="/admin/teacher/:id">
             <AdminTeacherProfile />
           </Route>
           <Route path="/user/opinion">
-            <Opinion/>
+            <Opinion />
           </Route>
           <Route path="/user/appointmentStatus">
-            <AppointmentStatus/>
+            <AppointmentStatus />
           </Route>
           <Route path="/user/orderList">
-            <OrderList/>
+            <OrderList />
           </Route>
-          
+
           <Route path="/publicRanking">
             <PublicRanking />
           </Route>
